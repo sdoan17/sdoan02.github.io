@@ -38,17 +38,17 @@
 }
 
 .banner{
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 8%;
+    padding: 20px 8%;
     background: rgb(45, 56, 63);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    gap: 40px;
 }   
 
 .logo{
@@ -58,6 +58,12 @@
     transition: color 0.3s ease;
 }
 
+.slide_bar {
+    display: flex;
+    flex: 1; /* Makes .slide_bar take up available space between .logo and .contact */
+    justify-content: space-evenly; /* Evenly distributes links within .slide_bar */
+    margin: 0; /* Removes extra spacing */
+}
 .slide_bar a{
     font-size: 20px;
     color: rgb(244, 235, 235);
@@ -66,15 +72,14 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 5px;
     border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
     text-align: center;
-    margin: 100px;
 }
 
 .slide_bar a:hover{
     color: #9b59b6;
     border-bottom: 2px solid #9b59b6;
 }
+
 
 .contact{
     font-size: 15px;
@@ -92,3 +97,43 @@
     background-color: #9b59b6;
     box-shadow:  0 0 25px #9b59b6;
 }
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 20px 12% 0;
+}
+
+.home-content{
+    max-width: 800px;
+}
+
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+
+.home-content{
+    font-size: 25px;
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.images img{
+    width: 400px;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover; /* Ensures the image covers the frame */
+    display: block;
+    margin: 0 auto;
+
+}
+
+
