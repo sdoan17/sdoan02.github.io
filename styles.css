@@ -38,17 +38,17 @@
 }
 
 .banner{
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 8%;
+    padding: 20px 8%;
     background: rgb(45, 56, 63);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    gap: 40px;
 }   
 
 .logo{
@@ -58,6 +58,12 @@
     transition: color 0.3s ease;
 }
 
+.slide_bar {
+    display: flex;
+    flex: 1; /* Makes .slide_bar take up available space between .logo and .contact */
+    justify-content: space-evenly; /* Evenly distributes links within .slide_bar */
+    margin: 0; /* Removes extra spacing */
+}
 .slide_bar a{
     font-size: 20px;
     color: rgb(244, 235, 235);
@@ -66,15 +72,14 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 5px;
     border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
     text-align: center;
-    margin: 100px;
 }
 
 .slide_bar a:hover{
     color: #9b59b6;
     border-bottom: 2px solid #9b59b6;
 }
+
 
 .contact{
     font-size: 15px;
@@ -92,3 +97,172 @@
     background-color: #9b59b6;
     box-shadow:  0 0 25px #9b59b6;
 }
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 20px 12% 0;
+}
+
+.home-content{
+    max-width: 800px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.home-content h1{
+    font-size: 65px;
+    font-weight: bold;
+    color: #1c2935;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.home-content h1 span {
+    color: #9b59b6; /* Highlighted color for "Simon Doan" and "Data Analysis" */
+}
+
+.home-content{
+    font-size: 25px;
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.images img{
+    width: 400px;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover; /* Ensures the image covers the frame */
+    display: block;
+    margin: 0 auto;
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    background-color: #1c2935;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9b59b6; 
+    border-radius: 8px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b572c3; 
+}
+
+.pro{
+    font-size: 40px;
+    padding: 50px 50px;
+    padding-bottom: 0;
+    text-align: center;
+    color: #623176;
+    margin-bottom: 15px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns, one for each project */
+    gap: 30px; /* Space between projects */
+    padding: 40px 8%; /* Adds padding around the projects section */
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+/* Individual Project Card */
+.projects article {
+    gap: 20px; /* Space between image and text */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.projects img{
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: 8%;
+}
+
+.projects article{
+    padding: 20px;
+}
+
+.projects article header h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1c2935;
+    margin-bottom: 15px;
+
+}
+
+.projects p{
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 2;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.actions {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    margin: 40px;
+
+}
+
+.actions a{
+    color:#1c2935
+}
+
+.actions:hover{
+    background-color: #9b59b6;
+    box-shadow:  0 0 25px #9b59b6;
+}
+
+.projects h2 a{
+    color: #1c2935;
+    font-weight: bold;
+}
+
+.projects h2:hover{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9b59b6;
+    box-shadow:  0 0 25px #9b59b6;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
