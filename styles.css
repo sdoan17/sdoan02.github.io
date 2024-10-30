@@ -266,3 +266,46 @@ body{
     transition: 0.3s ease;
 }
 
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #e7eaed;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+
+.footer .social {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    text-align: center;
+}
+
+.footer .social a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 50%; /* Makes icon circular */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+}
+
+.footer .social img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    color: #f8f9fa;
+}
+
+.footer .social a:hover {
+    background-color: #333; 
+    border-color: #333; 
+}
+
+.footer .social a:hover img {
+    filter: brightness(0) invert(1); 
+}
